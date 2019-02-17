@@ -92,6 +92,7 @@ require_once( SECURITY_DIR_PATH_CLASSES . 'Class-Enqueue.php' );
 require_once( SECURITY_DIR_PATH_CLASSES . 'Class-Config.php' );
 require_once( SECURITY_DIR_PATH_HOOKS . 'hooks.php' );
 require_once( SECURITY_DIR_PATH_HOOKS . 'hooks-functions.php' );
+require_once( SECURITY_DIR_PATH_INC . 'security-companion/security-companion.php' );
 require_once( SECURITY_DIR_PATH_INC . 'class-epsilon-dashboard-autoloader.php' );
 require_once( SECURITY_DIR_PATH_INC . 'class-epsilon-init-dashboard.php' );
 
