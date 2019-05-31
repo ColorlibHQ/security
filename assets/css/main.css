@@ -1955,6 +1955,10 @@ blockquote,
 #header #logo img {
   padding: 0;
   margin: 0;
+  max-width: 130px;
+}
+.header-tagline{
+  color: #fff;
 }
 
 @media (max-width: 768px) {
