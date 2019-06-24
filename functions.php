@@ -74,6 +74,14 @@ if( ! defined( 'SECURITY_DIR_PATH_WIDGET' ) ) {
 }
 
 
+// Admin Enqueue script
+function security_admin_script(){
+    wp_enqueue_style( 'security-admin', get_template_directory_uri().'/assets/css/security_admin.css', false, '1.0.0' );
+    wp_enqueue_script( 'security_admin', get_template_directory_uri().'/assets/js/security_admin.js', false, '1.0.0' );
+}
+add_action( 'admin_enqueue_scripts', 'security_admin_script' );
+
+
 /**
  * Include File
  *
