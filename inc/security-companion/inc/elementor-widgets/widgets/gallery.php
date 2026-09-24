@@ -170,16 +170,23 @@ class Security_Gallery extends Widget_Base {
         if( \Elementor\Plugin::$instance->editor->is_edit_mode() === true  ) {
             ?>
             <script>
-            ( function( $ ) {
-                "use strict";
-                //  Gallery
-                $("#grid-container").justifiedGallery({
-                    rowHeight : 200,
-                    captions : false,
-                    margins : 30
-                });
-
-            })(jQuery);
+            (function () {
+                function run() {
+                    var UI = window.ColorlibUI;
+                    if (!UI) return;
+                    //  Gallery
+                    UI.justifiedGallery('#grid-container', {
+                        rowHeight : 200,
+                        captions : false,
+                        margins : 30
+                    });
+                }
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', run);
+                } else {
+                    run();
+                }
+            })();
             </script>
             <?php
         }

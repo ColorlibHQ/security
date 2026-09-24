@@ -10,7 +10,7 @@
 add_action( 'wp_enqueue_scripts', 'security_sl_enqueue_scripts' );
 function security_sl_enqueue_scripts() {
 
-	wp_enqueue_script( 'security-post-likes', SECURITY_COMPANION_DIR_URL . 'js/post-likes.js', array( 'jquery' ), '0.5', false );
+	wp_enqueue_script( 'security-post-likes', SECURITY_COMPANION_DIR_URL . 'js/post-likes.js', array( 'security-ui-js' ), '0.5-s2', true );
 
 	wp_localize_script( 'security-post-likes', 'simpleLikes', array(
 		'ajaxurl' => admin_url( 'admin-ajax.php' ),

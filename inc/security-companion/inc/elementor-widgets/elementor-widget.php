@@ -294,21 +294,16 @@ if ( !class_exists( 'Security_El_Widgets' ) ) {
             // googleapis js
             wp_register_script( 'maps-googleapis', '//maps.googleapis.com/maps/api/js?key='.esc_attr( $apiKey ) );
 
-            // ajaxchimp js
-            wp_enqueue_script( 'jquery-ajaxchimp', SECURITY_COMPANION_DIR_URL . 'inc/elementor-widgets/assets/js/jquery.ajaxchimp.min.js', array('jquery'), '1.0', true );
 
 
 
-            // owl carousel js
-            wp_enqueue_script( 'owl-carousel', SECURITY_COMPANION_DIR_URL . 'inc/elementor-widgets/assets/js/owl.carousel.min.js', array('jquery'), '1.0', true );
 
             // security map custom js
-            wp_register_script( 'security-map-custom', SECURITY_COMPANION_DIR_URL . 'inc/elementor-widgets/assets/js/map-custom.js', array('jquery'), '1.0', true );
+            wp_register_script( 'security-map-custom', SECURITY_COMPANION_DIR_URL . 'inc/elementor-widgets/assets/js/map-custom.js', array(), '1.0-s2', true );
 
-            wp_enqueue_script( 'justifiedGallery', SECURITY_COMPANION_DIR_URL . 'inc/elementor-widgets/assets/js/jquery.justifiedGallery.min.js', array('jquery'), '1.0', true );
 
             // security companion main js
-            wp_enqueue_script( 'security', SECURITY_COMPANION_DIR_URL . 'inc/elementor-widgets/assets/js/security-companion-main.js', array('jquery', 'security-ui-js'), '1.0-s1', true);
+            wp_enqueue_script( 'security', SECURITY_COMPANION_DIR_URL . 'inc/elementor-widgets/assets/js/security-companion-main.js', array( 'security-ui-js' ), '1.0-s2', true);
            
         }
 
