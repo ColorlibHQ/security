@@ -194,13 +194,6 @@ final class Security {
 					'in_footer' 	=> true
 				),
 				array(
-					'handler'		=> 'security-theme-jquery-nice-select',
-					'file' 			=> $jsPath.'jquery.nice-select.min.js',
-					'dependency' 	=> array( 'jquery' ),
-					'version' 		=> '1.0',
-					'in_footer' 	=> true
-				),
-				array(
 					'handler'		=> 'security-theme-jquery-sticky',
 					'file' 			=> $jsPath.'jquery.sticky.js',
 					'dependency' 	=> array( 'jquery' ),
@@ -215,10 +208,17 @@ final class Security {
 					'in_footer' 	=> true
 				),
 				array(
+					'handler'		=> 'security-ui-js',
+					'file' 			=> $jsPath.'colorlib-ui.js',
+					'dependency' 	=> array(),
+					'version' 		=> '2.1.1',
+					'in_footer' 	=> true
+				),
+				array(
 					'handler'		=> 'security-theme-security-main',
 					'file' 			=> $jsPath.'main.js',
-					'dependency' 	=> array( 'jquery', 'imagesloaded' ),
-					'version' 		=> $this->security_version,
+					'dependency' 	=> array( 'jquery', 'imagesloaded', 'security-ui-js' ),
+					'version' 		=> $this->security_version . '-s1',
 					'in_footer' 	=> true
 				),
 			)

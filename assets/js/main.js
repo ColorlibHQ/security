@@ -14,7 +14,7 @@
 	$(".fitscreen").css("height", fitscreen);
 
      if(document.getElementById("default-select")){
-          $('select').niceSelect();
+          ColorlibUI.enhanceSelects('select');
     };
 
   // Initiate superfish on nav menu
