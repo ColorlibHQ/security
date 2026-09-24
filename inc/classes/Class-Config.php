@@ -177,7 +177,7 @@ final class Security {
 					'handler'		=> 'security-theme-security-main',
 					'file' 			=> $cssPath.'main.css',
 					'dependency' 	=> array(),
-					'version' 		=> $this->security_version,
+					'version' 		=> $this->security_version . '-s3',
 				),
 				array(
 					'handler'		=> 'security-theme-security-style',
